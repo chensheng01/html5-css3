@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>八卦图</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+
+    }
+
+    body {
+        background: #eee;
+    }
+
+    @keyframes x {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+    #八卦 {
+        /* border: 1px solid white; */
+        width: 400px;
+        height: 400px;
+        border-radius: 200px;
+        position: relative;
+        overflow: hidden;
+        /* transform: rotate(-90deg); */
+        animation: x 10s linear infinite;
+
+
+
+
+    }
+
+    #八卦>div:first-child {
+        /* border: 10px solid green; */
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        background: black;
+
+
+    }
+
+    #八卦>div:nth-child(2) {
+        /* border: 10px solid skyblue; */
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        background-color: white;
+    }
+
+    #八卦>div:nth-child(3) {
+        /* border: 1px solid blue; */
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        left: 50%;
+        /* right: 0; */
+        margin-left: -100px;
+        border-radius: 50%;
+        background: black;
+
+
+    }
+
+    #八卦>div:nth-child(4) {
+        /* border: 1px solid blue; */
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        left: 50%;
+        bottom: 0;
+        /* right: 0; */
+        margin-left: -100px;
+        border-radius: 50%;
+        background: white;
+
+
+    }
+
+    #八卦>div:nth-child(5) {
+        /* border: 1px solid blue; */
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: 50%;
+        bottom: 65px;
+        /* right: 0; */
+        margin-left: -25px;
+        border-radius: 50%;
+        background: black;
+    }
+
+    #八卦>div:nth-child(6) {
+        /* border: 1px solid blue; */
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: 50%;
+        top: 65px;
+        /* right: 0; */
+        margin-left: -25px;
+        border-radius: 50%;
+        background: white;
+    }
+
+    .wrapper {
+        /* border: 10px solid red; */
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /*垂直水平居中的三行代码*/
+        flex-direction: column;
+
+    }
+
+    .bagua-description {
+        margin-top: 1em;
+    }
+</style>
+
+
+<body>
+    <div class="wrapper">
+        <div id="八卦">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="bagua-description">道可道，非常道</div>
+    </div>
+</body>
+
+</html>
